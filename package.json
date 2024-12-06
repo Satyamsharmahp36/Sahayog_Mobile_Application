@@ -1,0 +1,38 @@
+{
+  "name": "sahayogapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.11.0",
+    "expo": "^51.0.32",
+    "expo-document-picker": "^12.0.2",
+    "expo-file-system": "^17.0.1",
+    "expo-location": "^17.0.1",
+    "expo-status-bar": "~1.12.1",
+    "nativewind": "^2.0.11",
+    "postcss": "^8.4.47",
+    "react": "18.2.0",
+    "react-native": "0.74.5",
+    "react-native-gesture-handler": "^2.19.0",
+    "react-native-maps": "^1.18.0",
+    "react-native-reanimated": "^3.15.2",
+    "react-native-safe-area-context": "^4.11.0",
+    "react-native-screens": "^3.34.0",
+    "react-native-vector-icons": "^10.2.0",
+    "expo-dev-client": "~4.0.26"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "private": true
+}
