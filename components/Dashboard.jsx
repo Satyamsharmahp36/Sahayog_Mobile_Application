@@ -124,7 +124,7 @@ const Dashboard = () => {
             onPress={() => navigation.navigate('DisasterGuide')}
           >
             <Text className="font-bold">Disaster Guide</Text>
-            <Text>Do and Don't you should follow if you got stuck in any kind of disaster. Follow these steps to save ourselves.</Text>
+            <Text>Do and Don't you should follow if you got stuck any kind of disaster. Follow these steps to save ourselves.</Text>
             <Text className="mt-2 bg-blue-800 text-white w-24 rounded-md font-semibold p-1">Check Out</Text>
           </StyledTouchableOpacity>
           <StyledTouchableOpacity

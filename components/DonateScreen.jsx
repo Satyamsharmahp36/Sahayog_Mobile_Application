@@ -25,7 +25,7 @@ const DonateScreen = () => {
 
   return (
     <StyledView className="flex-1 bg-gray-100 p-4">
-      <StyledText className="text-2xl font-bold mb-4">Donate</StyledText>
+      <StyledText className="text-2xl font-bold mb-4">Donate </StyledText>
       <StyledText className="mb-2">UPI ID: {upiId}</StyledText>
       <StyledTextInput
         className="border border-gray-300 p-2 rounded mb-4"

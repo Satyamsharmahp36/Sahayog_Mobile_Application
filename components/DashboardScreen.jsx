@@ -30,7 +30,7 @@ const DashboardScreen = () => {
       <Tab.Screen 
         name="Main" 
         component={Dashboard} 
-        options={{ headerShown: false }} // Hide header for Main tab
+        options={{ headerShown: false }} 
       />
       <Tab.Screen name="Post" component={PostScreen} />
       <Tab.Screen name="Feed" component={FeedScreen} />

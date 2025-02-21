@@ -43,7 +43,7 @@ const PostScreen = () => {
         onChangeText={setTitle}
       />
       <StyledTextInput
-        className="border border-gray-300 p-2 rounded mb-4"
+        className="border border-gray-300  p-2 rounded mb-4"
         placeholder="Description"
         value={description}
         onChangeText={setDescription}

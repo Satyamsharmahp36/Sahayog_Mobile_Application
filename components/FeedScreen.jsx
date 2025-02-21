@@ -49,7 +49,7 @@ const FeedScreen = () => {
 
   return (
     <StyledView className="flex-1 bg-gray-100 p-4">
-      <StyledText className="text-2xl font-bold mb-4">Feed</StyledText>
+      <StyledText className="text-2xl font-bold mb-4">Feed </StyledText>
       <FlatList
         data={demoPosts}
         renderItem={renderItem}

@@ -16,7 +16,7 @@ const DisasterGuideScreen = () => (
         <Text className="text-lg font-semibold mb-2">Don'ts:</Text>
         <Text>- Do not use elevators.</Text>
         <Text>- Do not run outside during the shaking.</Text>
-        <Text>- Avoid using matches, candles, or open flames due to possible gas leaks.</Text>
+        <Text>- Avoid using matches, candles, or open flame due to possible gas leaks.</Text>
       </View>
 
       <View className="mb-4 p-4 bg-white rounded-lg shadow-md">

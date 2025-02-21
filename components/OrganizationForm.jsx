@@ -83,7 +83,7 @@ const OrganizationForm = ({ organization, onClose, onSubmit }) => {
         onPress={() => setConfirmed(!confirmed)}
       >
         <View className={`w-6 h-6 border-2 border-blue-400 text-white rounded mr-2 ${confirmed ? 'bg-blue-400' : 'bg-white'}`} />
-        <Text className='text-white'>I confirm the above filled information</Text>
+        <Text className='text-white'>I confirm the above filled information </Text>
       </TouchableOpacity>
       <TouchableOpacity
         className="bg-blue-500 p-2 rounded mb-4"

@@ -75,7 +75,7 @@ const InformationCenterScreen = () => (
         <View className="mb-2">
           <Text className="font-semibold">Government Civil Hospital Baddi</Text>
           <Text>Location: Baddi, District Solan, Himachal Pradesh, 173205</Text>
-          <Text>Contact Number: +91-1795-244831</Text>
+          <Text>Contact Number:  +91-1795-244831</Text>
         </View>
         <View className="mb-2">
           <Text className="font-semibold">Kasauli Medical Centre (Nearby)</Text>

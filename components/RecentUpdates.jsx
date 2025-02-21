@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, Animated, Dimensions } from 'react-native';
 import { styled } from 'nativewind';
 
@@ -7,37 +7,98 @@ const StyledText = styled(Text);
 
 const RecentUpdates = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
-
-  const updates = [
-    { location: 'Baddi, Himachal Pradesh', event: 'Landslide', time: '9:00 AM', date: '02/Sep/2024' },
-    { location: 'Indore, M.P', event: 'Flood', time: '2:00 PM', date: '01/Sep/2024' },
-    { location: 'Mumbai, Maharashtra', event: 'Heavy Rainfall', time: '11:30 AM', date: '03/Sep/2024' },
-    { location: 'Chennai, Tamil Nadu', event: 'Cyclone Warning', time: '4:45 PM', date: '04/Sep/2024' },
-    { location: 'Jaipur, Rajasthan', event: 'Heatwave', time: '1:15 PM', date: '05/Sep/2024' },
-    { location: 'Guwahati, Assam', event: 'Earthquake', time: '3:20 AM', date: '06/Sep/2024' },
-    { location: 'Dehradun, Uttarakhand', event: 'Forest Fire', time: '5:50 PM', date: '07/Sep/2024' },
-    { location: 'Bhopal, Madhya Pradesh', event: 'Severe Thunderstorm', time: '7:10 PM', date: '08/Sep/2024' },
-  ];
-
+  const [updates, setUpdates] = useState([]);
   const cardWidth = 200;
   const { width: screenWidth } = Dimensions.get('window');
+
+
+  // useEffect(() => {
+  //   const fetchUpdates = async () => {
+  //     try {
+  //       const response = await fetch('http://192.168.29.184:8080/stats'); 
+  //       const data = await response.json();
+
+  //       const formattedUpdates = data.map((item) => ({
+  //         location: `${item.location.city ? item.location.city + ', ' : ''}${item.location.state}`,
+  //         event: item.description,
+  //         time: item.timestamp ? new Date(item.timestamp).toLocaleTimeString() : 'N/A',
+  //         date: item.timestamp ? new Date(item.timestamp).toLocaleDateString() : 'N/A',
+  //       }));
+
+  //       console.log('Formatted Updates:', formattedUpdates); // Debugging
+  //       setUpdates(formattedUpdates);
+  //     } catch (error) {
+  //       console.error('Error fetching updates:', error);
+  //     }
+  //   };
+
+  //   fetchUpdates();
+  // }, []);
+
+  useEffect(() => {
+    const dummyUpdates = [
+      {
+        location: 'Mumbai, Maharashtra',
+        event: 'Heavy rainfall warning issued.',
+        time: '10:30 AM',
+        date: '21 Feb 2025',
+      },
+      {
+        location: 'Delhi, Delhi NCR',
+        event: 'Air quality reaches severe level.',
+        time: '09:15 AM',
+        date: '21 Feb 2025',
+      },
+      {
+        location: 'Chennai, Tamil Nadu',
+        event: 'Cyclone alert for coastal areas.',
+        time: '11:00 AM',
+        date: '21 Feb 2025',
+      },
+      {
+        location: 'Kolkata, West Bengal',
+        event: 'Flooding reported in low-lying areas.',
+        time: '08:45 AM',
+        date: '21 Feb 2025',
+      },
+      {
+        location: 'Bengaluru, Karnataka',
+        event: 'Traffic congestion due to protests.',
+        time: '10:00 AM',
+        date: '21 Feb 2025',
+      },
+    ];
+
+    setUpdates(dummyUpdates);
+  }, []);
+
   const totalWidth = updates.length * cardWidth;
 
   useEffect(() => {
-    const animation = Animated.loop(
-      Animated.timing(scrollX, {
-        toValue: -totalWidth,
-        duration: updates.length * 3000, // Adjust speed here
-        useNativeDriver: true,
-      })
-    );
+    if (updates.length > 0) {
+      const animation = Animated.loop(
+        Animated.timing(scrollX, {
+          toValue: -totalWidth,
+          duration: updates.length * 3000,
+          useNativeDriver: true,
+        })
+      );
 
-    animation.start();
+      animation.start();
 
-    return () => animation.stop();
+      return () => animation.stop();
+    }
   }, [scrollX, updates.length, totalWidth]);
 
   const renderUpdates = () => {
+    if (updates.length === 0) {
+      return (
+        <StyledView className="bg-gray-200 p-3 rounded-lg">
+          <StyledText className="font-bold">No updates available</StyledText>
+        </StyledView>
+      );
+    }
+
     return updates.concat(updates).map((update, index) => (
       <StyledView
         key={index}

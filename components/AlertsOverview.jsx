@@ -18,13 +18,13 @@ const AlertsOverview = () => {
         </StyledView>
         <StyledView className=" p-2 w-1/2">
           <StyledView className="bg-red-200 p-2 rounded mb-2">
-            <StyledText className="font-bold">Critical Alerts: 12</StyledText>
+            <StyledText className="font-bold">Critical Alerts : 12</StyledText>
           </StyledView>
           <StyledView className="bg-yellow-200 p-2 rounded mb-2">
-            <StyledText className="font-bold">Moderate Alerts: 5</StyledText>
+            <StyledText className="font-bold">Moderate Alerts : 5</StyledText>
           </StyledView>
           <StyledView className="bg-green-200 p-2 rounded">
-            <StyledText className="font-bold">Low Alerts: 2</StyledText>
+            <StyledText className="font-bold">Low Alerts : 2</StyledText>
           </StyledView>
         </StyledView>
       </StyledView>

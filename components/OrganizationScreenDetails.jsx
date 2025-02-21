@@ -39,7 +39,7 @@ const OrganizationDetailsScreen = ({ navigation }) => {
           className="bg-blue-500 p-3 rounded-md mb-2"
           onPress={() => handleOrgSelect(org)}
         >
-          <Text className="text-white text-center">{org}</Text>
+          <Text className="text-white  text-center">{org}</Text>
         </TouchableOpacity>
       ))}
 

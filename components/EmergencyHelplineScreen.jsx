@@ -14,7 +14,7 @@ const EmergencyHelplineScreen = () => (
         <Text>- 101</Text>
         <Text className="text-lg font-semibold mb-2">Ambulance:</Text>
         <Text>- 102</Text>
-        <Text className="text-lg font-semibold mb-2">Disaster Management (NDRF):</Text>
+        <Text className="text-lg font-semibold mb-2">Disaster Management  (NDRF):</Text>
         <Text>- 112</Text>
       </View>
 

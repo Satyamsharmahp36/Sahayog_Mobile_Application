@@ -58,7 +58,7 @@ const LoginPage = ({ navigation }) => {
           className="w-full bg-blue-400 rounded-full py-2 px-4 mb-4"
           onPress={handleLogin}
         >
-          <Text className="text-white text-center">Login</Text>
+          <Text className="text-white text-center">Login </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => {}}>
